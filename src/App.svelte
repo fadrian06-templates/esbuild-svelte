@@ -1,19 +1,20 @@
 <script>
-  let count = 0;
+  let count = $state(0);
 
-  function incrementCount() {
+  function onclick() {
     count += 1;
   }
 </script>
 
 <div>
   <a href="https://svelte.dev" rel="noreferrer" target="_blank">
+    <img alt="Esbuild logo" class="logo" src="assets/esbuild.svg" />
     <img alt="Svelte logo" class="logo svelte" src="assets/svelte.svg" />
   </a>
 </div>
-<h1>Svelte</h1>
+<h1>ESBuild + Svelte</h1>
 <div class="card">
-  <button on:click={incrementCount} type="button">count is {count}</button>
+  <button {onclick}>Count is {count}</button>
   <p>
     Edit <code>src/App.svelte</code> and save to test LiveReload
   </p>

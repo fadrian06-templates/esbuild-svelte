@@ -1,3 +1,4 @@
+import { mount } from 'svelte'
 import App from './App.svelte'
 import './index.css'
 
@@ -10,4 +11,4 @@ if (!target) {
   throw new Error('Root element not found')
 }
 
-new App({ target })
+mount(App, { target })
